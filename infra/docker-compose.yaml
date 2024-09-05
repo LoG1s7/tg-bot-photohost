@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: photohost-bot
+    env_file:
+      - ../.env
+    ports:
+      - "5000:5000"
+    volumes:
+      - ..:/app
